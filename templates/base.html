@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/_variables.scss')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/_bootswatch.scss')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}" type="image/x-icon">
+</head>
+<body>
+    <div id="top"></div>
+   {%block header%}
+   <nav class="navbar navbar-default fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Carlos Marquez</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active">
+              <a class="nav-link" href="/#about">About Me <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#workexp">Work Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/skills">Skills and Certifications</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/carlos-marquez-4b8b4875/" target="_blank">LinkedIn</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class="container jumbotron">
+
+    <div class="page-header" id="banner">
+      <div class="row">
+        <div class="col-lg-8 col-md-7 col-sm-6">
+          <h1><img src="{{url_for('static', filename='images/me.jpg')}}" style="width: 80px; height: 85px; position: relative; float: left;">
+            Carlos Marquez</h1>
+          <p class="lead">Computer Science Engineer</p>
+        </div>
+      </div>
+    </div>
+    {%endblock%}
+    <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="container">
+            {%block content%}
+            {%endblock%}
+            <a href="#top" class="float-lg-right">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
